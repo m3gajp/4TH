@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let age = parseInt(prompt("Ingresa tu edad"));
+        let cantbol = parseInt(prompt("Ingresa la cantidad de boletas que desea comprar"));
+        let pricebol = parseFloat(prompt("Ingresa el precio de cada boleta"));
+        var subtotal = cantbol * pricebol;
+        var discount = 0;
+        var adcdiscount = 0;
+        var valfinal = 0;
+        if (cantbol >=5){
+            discount = subtotal * 0.12;
+            valfinal = subtotal - discount;
+        }else if(cantbol >=3 && cantbol <=4){
+            discount = subtotal * 0.08;
+            valfinal = subtotal - discount;
+        }else{
+            discount = 0;
+            valfinal = subtotal;
+        }
+        if (age >= 60){
+            adcdiscount = subtotal * 0.05;
+        }
+        valfinal = subtotal - discount - adcdiscount;
+        document.write(nombre+ "tienes un subtotal de: $"+subtotal, "<br>");
+        document.write("Con un descuento por cantidad de: $"+discount, "<br>");
+        document.write("Un Descuento Adicional de: $"+adcdiscount, "<br>");
+        document.write("Y un valor final de: $"+valfinal, "<br>");
+    </script>
+</body>
+</html>

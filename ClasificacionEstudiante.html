@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClasificaciónEstudiante</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let cantnotes = parseInt(prompt("Ingresa la cantidad de notas"));
+        var prom = 0;
+        for(let i = 1; i<=cantnotes; i++){
+            let notes = parseFloat(prompt("Ingresa la nota "+i));
+            prom = prom + notes;
+        }
+        prom = prom / cantnotes;
+            document.write(nombre+ " tu promedio es de: "+prom, "<br>");
+            if (prom >= 3.0){
+                if (prom >= 4.5){
+                    document.write(nombre+ "tu promedio es Excelente");
+                }if(prom >=4.0 && prom <= 4.49){
+                    document.write(nombre+ " tu promedio es Sobresaliente");
+                }else if(prom >= 3.0 && prom <= 3.99){
+                    document.write(nombre + "usted aprobo");
+                }
+            }else{
+                if(prom >=2 && prom <= 2.99){
+                    document.write(nombre+ " usted debe recuperar");
+                }else{
+                    document.write(nombre+ "usted reprobó definitivamente");
+                }
+            }
+
+    </script>
+</body>
+</html>

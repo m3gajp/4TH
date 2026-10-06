@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsumoEnergia</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let estrato = parseInt(prompt("Ingresa tu estrato socioeconomico"));
+        let consume = parseInt(prompt("Ingresa tu consumo en kWh"));
+        var discount = 0;
+        var total = 0;
+        var valconsume = 0;
+        if (estrato === 1){
+            valor = 300;
+        }else if(estrato === 2){
+            valor = 450;
+        }else{
+            valor = 600;
+        }
+        valconsume = consume * valor;
+        if (consume < 150){
+            discount = valconsume * 0.08;
+            total = valconsume - discount;
+            document.write(nombre+ " su valor del consumo es de: $"+valconsume, "<br>");
+            document.write("Tiene un descuento de: $"+discount, "<br>");
+            document.write("Con una totalidad de: $"+total, "<br>");
+        }else if(consume > 500){
+            discount = valconsume * 0.12;
+            total = valconsume + discount;
+            document.write(nombre+ " su valor del consumo es de: $"+valconsume, "<br>");
+            document.write("Tiene un recargo de: $"+discount, "<br>");
+            document.write("Con una totalidad de: $"+total, "<br>");
+        }else{
+            total = valconsume;
+            document.write(nombre+ " su valor del consumo es de: $"+valconsume, "<br>");
+            document.write("No tiene descuento ni recargo", "<br>");
+            document.write("Con una totalidad de: $"+total, "<br>");
+        }
+    </script>
+</body>
+</html>

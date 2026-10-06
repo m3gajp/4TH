@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CobroParqueadero</title>
+</head>
+<body>
+    <script>
+        let hours = parseFloat(prompt("Ingrese las horas parqueadas del vehiculo"));
+        let vehicle = prompt("Ingresa tu tipo de vehiculo (Moto o Automóvil)");
+        var tax = 0;
+        var discount = 0;
+        var total = tax;
+        if (vehicle === "Moto"){
+            if (hours <=3){
+                tax = 2000 * hours;
+            }else{
+                tax = 2000 * 3 + ((hours - 3) * 1500);
+            }
+        }if(vehicle === "Automovil" && "Automóvil"){
+            if(hours <=3){
+                tax = 4000
+            }else{
+                tax = 4000 + ((hours - 3)* 3000);
+            }
+        }if(tax > 30000){
+            discount = tax * 0.10;
+        }
+        total = tax - discount;
+        document.write("Total: $" + tax, "<br>");
+        document.write("Descuento: $" + discount, "<br>");
+        document.write("Valor Final: $" + total, "<br>");
+    </script>
+</body>
+</html>

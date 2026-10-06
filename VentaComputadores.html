@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>VentaComputadores</title>
+</head>
+<body>
+    <script>
+        let cantpc = parseInt(prompt("Ingresa la cantidad de computadores"));
+        let unity = parseFloat(prompt("Ingresa el precio por unidad"));
+        var discount = 0;
+        var total = 0;
+        let subtotal = cantpc * unity
+        if (cantpc >= 5 && cantpc <=9){
+            discount = subtotal * 0.10;
+        }else if(cantpc >=10){
+            discount = subtotal * 0.15;
+        }else{
+            discount = subtotal * 0.05;
+        }
+        if (subtotal > 20000000){
+            discount = discount + (subtotal * 0.05);
+        }
+        total = subtotal - discount;
+        document.write("Subtotal: $"+subtotal, "<br>");
+        document.write("Descuentos: $"+discount, "<br>");
+        document.write("Total: $"+total, "<br>");
+    </script>
+</body>
+</html>

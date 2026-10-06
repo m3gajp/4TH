@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiquidacionSalario</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let hours = parseInt(prompt("Ingresa las horas trabajadas"));
+        let perhour = parseFloat(prompt("Ingresa el valor por hora"));
+        var discount = 0;
+        var salary = 0;
+        var total = salary;
+        if (hours > 40 ){
+            salary = 40 * perhour + ((hours - 40)* (perhour * 1.5));
+        }else{
+            salary = hours * perhour;
+        }
+        if (salary > 3000000){
+            discount = salary * 0.08;
+        }else{
+            discount = salary * 0.04;
+        }
+        total = salary - discount;
+        document.write(nombre+ " tu salario bruto es de: $"+salary, "<br>");
+        document.write(nombre+ " tienes un descuento de: $"+discount, "<br>");
+        document.write(nombre+ " tu salario neto es de: $"+total, "<br>");
+    </script>
+</body>
+</html>

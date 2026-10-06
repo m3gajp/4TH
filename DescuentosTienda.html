@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>DescuentosTienda</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let purchase = parseFloat(prompt("Ingresa el valor de tu compra"));
+        let client = prompt("¿Qué tipo de cliente eres?");
+        var discount = 0;
+        var pay = purchase;
+        if (purchase >= 300000){
+            if (client === "VIP"){
+                discount = purchase * 0.15;
+                pay = purchase - discount;
+            }if (client === "Preferencial"){
+                discount = purchase * 0.10;
+                pay = purchase - discount;
+            }else{
+                discount = purchase * 0.05;
+                pay = purchase - discount;
+            }
+        }if (purchase < 300000){
+            if (client === "VIP"){
+                discount = purchase * 0.10;
+                pay = purchase - discount;
+            }if (client === "Preferencial"){
+                discount = purchase * 0.05;
+                pay = purchase - discount;
+            }
+        }
+        document.write("Nombre: "+nombre, "<br>");
+        document.write ("Valor de la compra: "+purchase, "<br>");
+        document.write ("Descuento: "+discount, "<br>");
+        document.write ("Total a pagar: "+pay, "<br>");
+    </script>
+</body>
+</html>

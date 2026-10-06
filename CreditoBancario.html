@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CreditoBancario</title>
+</head>
+<body>
+    <script>
+        let nombre = prompt("Ingresa tu nombre");
+        let salary = parseFloat(prompt("Ingresa tu salario"));
+        let old = parseInt(prompt("Ingresa tu antiguedad laboral"));
+        let worth = parseFloat(prompt("¿Qué valor solicitas?"));
+        var credit = salary
+        if (salary > 3000000){
+            if (old >=3){
+                credit = salary * 5;
+            }else{
+                credit = salary * 3;
+            }
+        }else{
+            if(old >=5){
+                credit = salary * 2;
+            }else{
+                credit = 0;
+            }
+        }
+        if (worth <= credit && credit > 0){
+            document.write("Credito aprobado");
+        }else{
+            document.write("Credito rechazado");
+        }
+    </script>
+</body>
+</html>
