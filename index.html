@@ -343,26 +343,26 @@ var Audio_ = (function(){
 ====================================================================== */
 var PHASES = [
 {
-    id: 'design', name: 'Design Phase', short: 'DESIGN', game: 'design',
-    color: '#bb9af7',
-    orderPrompt: 'Order these by how early each one appears in a typical design process.',
-    orderTerms: ['Wireframe', 'Mockup', 'Prototype', 'User Interface'],
+    id: 'development', name: 'Development Phase', short: 'DEV', game: 'development',
+    color: '#9ece6a',
+    orderPrompt: 'Put this everyday coding workflow in the right order.',
+    orderTerms: ['Code', 'Commit', 'Repository', 'Merge'],
     terms: [
-      { t:'Architecture', d:'The overall structure and organization of a software system.' },
-      { t:'Design Pattern', d:'A reusable solution to a common software design problem.' },
-      { t:'Interface', d:'A point where two systems, or a user and a system, interact.' },
-      { t:'User Interface', d:'The screens and controls a user sees and touches.' },
-      { t:'Wireframe', d:'A simple sketch showing where elements go on a screen, with no styling.' },
-      { t:'Prototype', d:'An early, clickable model of a product used to test ideas.' },
-      { t:'Database', d:"An organized place where an application's data is stored." },
-      { t:'Schema', d:'The structure that defines how data is organized in a database.' },
-      { t:'User Experience', d:'How it feels for a person to use the product.' },
-      { t:'Component', d:'A reusable, self-contained part of a larger system.' },
-      { t:'Modularity', d:'Building a system from separate, independent parts.' },
-      { t:'Diagram', d:'A visual drawing that explains how parts of a system relate.' },
-      { t:'Scalability', d:"A system's ability to handle growth in users or data." },
-      { t:'Mockup', d:'A realistic, styled preview of how a screen will look.' },
-      { t:'Security', d:'Protecting a system and its data from unauthorized access.' }
+      { t:'Code', d:'Instructions written for a computer to follow.' },
+      { t:'Programming Language', d:'A set of rules used to write instructions for a computer.' },
+      { t:'Algorithm', d:'A step-by-step set of instructions to solve a problem.' },
+      { t:'Back-End', d:'The server side of an app: data, logic, and servers.' },
+      { t:'Front-End', d:'The part of an app that users see and interact with.' },
+      { t:'Developer', d:'A person who writes and builds software.' },
+      { t:'Framework', d:'A set of tools and rules that helps build software faster.' },
+      { t:'Library', d:'Reusable code that adds ready-made features to a program.' },
+      { t:'Version Control', d:'A system that tracks changes to code over time.' },
+      { t:'Repository', d:"A place where a project's code and its history are stored." },
+      { t:'Commit', d:'To save a set of code changes in version control.' },
+      { t:'Merge', d:'To combine changes from two different branches.' },
+      { t:'Scripting', d:'Writing short programs that automate simple tasks.' },
+      { t:'Syntax', d:'The rules for writing valid code in a language.', snippet:"function greet(name)\n  return \"Hi \" + name\n}", snippetPrompt:'This code is missing something before the return line. What term names the rules it broke?' },
+      { t:'Debugging', d:'Finding and fixing errors in code.', snippet:"let total = pryce * qty; // NameError", snippetPrompt:'The variable name has a typo and crashes the program. What do we call the process of finding and fixing this?' }
     ]
   }
 ];;
